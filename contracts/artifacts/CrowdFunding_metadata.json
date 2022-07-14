@@ -107,6 +107,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "numRequests",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "raisedAmount",
 				"outputs": [
 					{
@@ -116,6 +129,13 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "refund",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -167,11 +187,11 @@
 	},
 	"sources": {
 		"contracts/CrowdFunding.sol": {
-			"keccak256": "0xc1517420e9699e7e0e9ef435f886b5cbb9cb0242cdd94cda512c38d0e45abd22",
+			"keccak256": "0x0f4309c255535c3397c1197189e1189e435db58893e8595a010c2be5a0592b80",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://acc2078d7acbeef36b2a37922a30b8bad77d0c22bd58b057ad7f6e79459a2e75",
-				"dweb:/ipfs/Qmdr8mQ79WVEKhYHnXc8TuSTgNfRZXueALjCGZoS9nSwvB"
+				"bzz-raw://c5fdc124d2b139d1b99cb7d0565f57281991f106d4ac65d58191a0952bf529a9",
+				"dweb:/ipfs/QmW6QvdKMnwmBPexs2ivArxYeriA6nvHccdm4YCa3yB4yE"
 			]
 		}
 	},
