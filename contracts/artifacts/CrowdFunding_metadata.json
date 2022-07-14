@@ -90,6 +90,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_reqno",
+						"type": "uint256"
+					}
+				],
+				"name": "makePayment",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "manager",
 				"outputs": [
@@ -223,11 +236,11 @@
 	},
 	"sources": {
 		"contracts/CrowdFunding.sol": {
-			"keccak256": "0xeb7411b4b4072963b7480840643552dffff7c3dffc8b0c70244f1c416890e6e3",
+			"keccak256": "0xd5ed7351b852154e7240e38b4abc21356ef9e6d8038ee3941bbce62ec3637226",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://b8ad0471abb261aaac92f4a976b7b2a12dd1797a7752d05cf2ee5dd78573fa7f",
-				"dweb:/ipfs/Qma988A7YFgrJqFmxR3pkwT4LCuYhMXDgiU2ujJwAMiTKV"
+				"bzz-raw://24c2dd9ec61c5c0cb9296cf51b7d9138dd4e48f0cd2185ba59ac4b53db34bf2d",
+				"dweb:/ipfs/QmY5LYA5Xt5aSwaYPoKz2fXTbKcBzWdztqyeFaprpNFgjy"
 			]
 		}
 	},

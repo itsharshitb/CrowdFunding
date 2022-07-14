@@ -74,4 +74,13 @@ contract CrowdFunding{
         thisRequest.voters[msg.sender]=true;
         thisRequest.noOfVoters++; 
     }
+
+    function makePayment(uint _reqno) public onlyManager{
+        require(raisedAmount>target);
+        Request storage thisRequest=requests[_reqno];
+        require(thisRequest.completed==false,"The request already completed");
+        require(thisRequest.noOfVoters>noOfContributors/2,"Majority does not support");
+        thisRequest.recipient.transfer(thisRequest.value);
+        thisRequest.completed=true;
+    }
 }
