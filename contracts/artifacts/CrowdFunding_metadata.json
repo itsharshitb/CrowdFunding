@@ -236,11 +236,11 @@
 	},
 	"sources": {
 		"contracts/CrowdFunding.sol": {
-			"keccak256": "0xd5ed7351b852154e7240e38b4abc21356ef9e6d8038ee3941bbce62ec3637226",
+			"keccak256": "0xd310fd9ed36726d7b3dc2d41782e243135fc1b27862f9a2335ef04babc6b70d6",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://24c2dd9ec61c5c0cb9296cf51b7d9138dd4e48f0cd2185ba59ac4b53db34bf2d",
-				"dweb:/ipfs/QmY5LYA5Xt5aSwaYPoKz2fXTbKcBzWdztqyeFaprpNFgjy"
+				"bzz-raw://4394974d0ad705a504c99799f4f6d17099ed2c4c1c05af5a855cad9a77698fcf",
+				"dweb:/ipfs/QmaxphLPWcVN9BzpjQjbbbgCZjF2qis86aW7poSu6DrtMe"
 			]
 		}
 	},

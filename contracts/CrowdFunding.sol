@@ -58,16 +58,16 @@ contract CrowdFunding{
     }
 
     function createRequests(string memory _description,address payable _recipient,uint _value) public onlyManager{
-        Request storage newRequest = requests[numRequests];
+        Request storage newRequest = requests[numRequests]; //array of requests
         numRequests++;
         newRequest.description = _description;
         newRequest.recipient = _recipient;
         newRequest.value = _value;
         newRequest.completed=false;
         newRequest.noOfVoters=0;
-    } 
+    }
 
-    function voteRequest(uint _reqno) public{
+    function voteRequest(uint _reqno) public{   //voting
         require(contributors[msg.sender]>0,"You must be contributor in order to vote");
         Request storage thisRequest = requests[_reqno];
         require(thisRequest.voters[msg.sender]==false,"You have already voted!");
@@ -75,9 +75,9 @@ contract CrowdFunding{
         thisRequest.noOfVoters++; 
     }
 
-    function makePayment(uint _reqno) public onlyManager{
-        require(raisedAmount>target);
-        Request storage thisRequest=requests[_reqno];
+    function makePayment(uint _reqno) public onlyManager{   //final funding part
+        require(raisedAmount>target);   //target
+        Request storage thisRequest=requests[_reqno];   //creating pointer to modeify request's data
         require(thisRequest.completed==false,"The request already completed");
         require(thisRequest.noOfVoters>noOfContributors/2,"Majority does not support");
         thisRequest.recipient.transfer(thisRequest.value);
