@@ -41,6 +41,29 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"internalType": "address payable",
+						"name": "_recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "createRequests",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "deadline",
 				"outputs": [
@@ -157,6 +180,19 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_reqno",
+						"type": "uint256"
+					}
+				],
+				"name": "voteRequest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -187,11 +223,11 @@
 	},
 	"sources": {
 		"contracts/CrowdFunding.sol": {
-			"keccak256": "0x0f4309c255535c3397c1197189e1189e435db58893e8595a010c2be5a0592b80",
+			"keccak256": "0xeb7411b4b4072963b7480840643552dffff7c3dffc8b0c70244f1c416890e6e3",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://c5fdc124d2b139d1b99cb7d0565f57281991f106d4ac65d58191a0952bf529a9",
-				"dweb:/ipfs/QmW6QvdKMnwmBPexs2ivArxYeriA6nvHccdm4YCa3yB4yE"
+				"bzz-raw://b8ad0471abb261aaac92f4a976b7b2a12dd1797a7752d05cf2ee5dd78573fa7f",
+				"dweb:/ipfs/Qma988A7YFgrJqFmxR3pkwT4LCuYhMXDgiU2ujJwAMiTKV"
 			]
 		}
 	},

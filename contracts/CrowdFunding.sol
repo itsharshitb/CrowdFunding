@@ -51,4 +51,27 @@ contract CrowdFunding{
         user.transfer(contributors[msg.sender]);
         contributors[msg.sender]=0;
     }
+
+    modifier onlyManager(){
+        require(msg.sender==manager,"Only manager can call this function");
+        _;
+    }
+
+    function createRequests(string memory _description,address payable _recipient,uint _value) public onlyManager{
+        Request storage newRequest = requests[numRequests];
+        numRequests++;
+        newRequest.description = _description;
+        newRequest.recipient = _recipient;
+        newRequest.value = _value;
+        newRequest.completed=false;
+        newRequest.noOfVoters=0;
+    } 
+
+    function voteRequest(uint _reqno) public{
+        require(contributors[msg.sender]>0,"You must be contributor in order to vote");
+        Request storage thisRequest = requests[_reqno];
+        require(thisRequest.voters[msg.sender]==false,"You have already voted!");
+        thisRequest.voters[msg.sender]=true;
+        thisRequest.noOfVoters++; 
+    }
 }
